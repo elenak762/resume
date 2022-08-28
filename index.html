@@ -6,73 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="elena, resume, cv" />
     <meta name="description" content="Это сайт - резюме Елены Козловой" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Elena Resume</title>
   </head>
   <body>
-    <h1>Елена Козлова</h1>
-    <img src="IMG_20220725_104008.jpg" width="200" alt="Елена Козлова" />
-    <p>Я работаю в <strong>научном институте</strong></p>
-    <p>Я люблю<em> вязать, учиться новому,</em> читать</p>
-    <h4>Список социальных сетей:</h4>
-    <a href="https://t.me/koz_pav_elena" target="_blank">Telegramm</a>
-    |
-    <a href="https://vk.com/id339754617" target="_blank">VK</a>
+    <div class="container">
+      <div class="info">
+        <img src="IMG_20220725_104008.jpg" alt="Елена Козлова" class="avatar" />
+        <div class="info-text">
+          <h1>Елена Козлова</h1>
+          <p>Я работаю в <strong>научном институте</strong></p>
+          <p>Я люблю<em> вязать, учиться новому,</em> читать</p>
+          <!-- </div> -->
+          <!-- <div class="card bg-yellow"> -->
+          <h4>Список социальных сетей:</h4>
+          <a href="https://t.me/koz_pav_elena" target="_blank">Telegram</a>
+          |
+          <a href="https://vk.com/id339754617" target="_blank">VK</a>
+        </div>
+      </div>
+      <div class="card bg-green">
+        <h2>Мои хобби</h2>
+        <ol class="list">
+          <li>Книги</li>
+          <li>Вязание</li>
+          <li>Путишествия</li>
+        </ol>
+      </div>
+      <div class="card bg-red">
+        <h2>Опыт работы</h2>
+        <table class="table">
+          <!-- <thead>
+            <tr>
+              <th>Название</th>
+              <th>Должность</th>
+              <th>Год</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <td>Гимназия</td>
+              <td>Секретарь директора</td>
+              <td>1992-1994</td>
+            </tr>
+            <tr>
+              <td>ИЗМИРАН</td>
+              <td>Техник</td>
+              <td>2010-2013</td>
+            </tr>
+            <tr>
+              <td>ИЗМИРАН</td>
+              <td>Старший инспектор канцелярии</td>
+              <td>2014 - сейчас</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <h2>Мои хобби</h2>
-    <ol>
-      <li>Книги</li>
-      <li>Вязание</li>
-      <li>Путишествия</li>
-    </ol>
-    <h2>Опыт работы</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Название</th>
-          <th>Должность</th>
-          <th>Год</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Гимназия</td>
-          <td>Секретарь директора</td>
-          <td>1992-1994</td>
-        </tr>
-        <tr>
-          <td>ИЗМИРАН</td>
-          <td>Техник</td>
-          <td>2010-2013</td>
-        </tr>
-        <tr>
-          <td>ИЗМИРАН</td>
-          <td>Старший инспектор канцелярии</td>
-          <td>2014 - сейчас</td>
-        </tr>
-      </tbody>
-    </table>
+      <form action="/" class="form">
+        <h2>Связаться со мной</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" placeholder="Введите имя" />
+          </div>
+          <div class="form-group">
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" placeholder="Введите email" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Ваше сообщение:</label>
 
-    <h2>Связаться со мной</h2>
-    <form action="/">
-      <div>
-        <label for="name">Ваше имя:</label>
-        <input type="text" id="name" placeholder="Введите имя" />
-      </div>
-      <div>
-        <label for="email">Ваш email:</label>
-        <input type="email" id="email" placeholder="Введите email" />
-      </div>
-      <div>
-        <label for="message">Ваше сообщение:</label>
-        <br />
-        <textarea
-          id="message"
-          cols="20"
-          rows="5"
-          placeholder="Введите сообщение"
-        ></textarea>
-      </div>
-      <input type="submit" value="Отправить" />
-    </form>
+          <textarea
+            id="message"
+            cols="20"
+            rows="5"
+            placeholder="Введите сообщение"
+          ></textarea>
+        </div>
+        <input class="btn" type="submit" value="Отправить" />
+      </form>
+    </div>
   </body>
 </html>
